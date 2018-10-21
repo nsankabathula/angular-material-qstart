@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { WindowRef } from './common/window.service';
+import { DialogService } from './common/dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent {
   title = 'app';
   windowHeight: number = 880
 
-  constructor(private windowRef: WindowRef) { }
+  constructor(private windowRef: WindowRef, private dialogSvc: DialogService) { }
 
   @HostListener('window:load')
   onLoad() {
@@ -28,5 +29,9 @@ export class AppComponent {
   onResize() {
     // call our matchHeight function here later
     this.resetHeight();
+  }
+
+  testDialog() {
+    this.dialogSvc.info();
   }
 }

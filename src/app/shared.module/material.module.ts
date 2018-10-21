@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {
     MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, MatListModule, MatSelectModule,
-    MatProgressSpinnerModule, MatCardModule
+    MatProgressSpinnerModule, MatCardModule, MatDialogModule
 } from '@angular/material';
 
 
@@ -30,14 +30,14 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatChipsModule, MatFormFieldModule, MatDatepickerModule,
         MatNativeDateModule, MatInputModule, MatListModule,
         MatStepperModule, MatSelectModule, MatTableModule, MatProgressSpinnerModule,
-        MatCardModule],
+        MatCardModule, MatDialogModule],
     exports: [MatButtonModule, MatCheckboxModule, MatIconModule,
         MatToolbarModule, BrowserAnimationsModule, MatMenuModule,
         MatGridListModule, MatSidenavModule, MatSlideToggleModule,
         MatChipsModule, MatFormFieldModule, MatDatepickerModule,
         MatNativeDateModule, MatInputModule, MatListModule,
         MatStepperModule, MatSelectModule, MatTableModule, MatProgressSpinnerModule,
-        MatCardModule],
+        MatCardModule, MatDialogModule],
 })
 export class MaterialModule {
 }

@@ -11,13 +11,15 @@ import { APP_ROUTES } from './app.routes';
 import { PageNotFoundComponent } from './common/pagenotfound.component';
 import { HomeComponent } from './common/home.component';
 import { WindowRef } from './common/window.service';
+import { DialogComponent, DialogService } from './common/dialog.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    DialogComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -30,7 +32,8 @@ import { WindowRef } from './common/window.service';
     MaterialModule,
     ReactiveFormsModule
   ],
-  providers: [WindowRef],
+  providers: [WindowRef, DialogService],
+  entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
